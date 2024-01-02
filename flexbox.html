@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+       .container{
+        height: 380px;
+        width: 1000px;
+        /* border: 3px solid black;  */
+        display: flex;
+              /* flex propertise for flex container  */
+            
+              /* flex-direction: row; */
+              /*flex-direction: column;
+             flex-direction: row-reverse;
+             flex-direction: column-reverse; */
+
+
+            /* flex-wrap: wrap; */
+             /*flex-wrap: wrap-reverse; */
+             /* flex-wrap: nowrap; defoult tag  */
+                
+             /* flex-flow: row-reverse wrap;  */
+
+             /* justify-content: center;
+             justify-content: space-between;
+             justify-content: space-around;
+             justify-content: space-evenly;
+              */
+ 
+              /* align-items: flex-start; */
+              /*align-items: center;
+              align-items: flex-end;
+                defoult */
+              /* align-items: stretch; */
+
+            
+
+       }
+       .item{
+         background-color: aquamarine;
+         border: 3px solid green;
+         padding: 1px;
+         margin: 7px;
+         width: 150px;
+         height: 200px;
+
+       }
+       #item-1{
+        /* jiss box ko 1st no. pe rakhna hai use oredr use kare     */
+        order: 2;
+        flex-shrink: 5;   /*shrink matlab chota hona*/
+       }
+       #item-2{
+        flex-grow: 30;
+
+       }
+       #item-3{
+        /* when flex-direction: is set to row flex-besis: will control width:  */
+        /* when flex-direction: is set to column flex-besis: will control higtht:  */
+          flex-basis: 300px;
+          /* shrink-grow-besis  */
+          flex: 2 2 233px;
+
+          /* align-self: flex-end;
+          align-self: flex-start;
+          align-self: center; */
+
+       }
+    </style>
+</head>
+<body>
+    <h2>This is CSS Flexbox</h2>
+    <div class="container">
+        <!-- div.item#item-$*4  -->
+          <div class="item" id="item-1">Fisrt Box</div>
+          <div class="item" id="item-2">Second Box</div>
+          <div class="item" id="item-3">Third Box</div>
+          <!-- <div class="item" id="item-4">Fourth Box</div>
+          <div class="item" id="item-5">Fifth Box</div>
+          <div class="item" id="item-6">SiXth Box</div> -->
+    </div>
+</body>
+</html>
